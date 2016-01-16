@@ -40,6 +40,10 @@ You can load them from the terminal (or from the bin/modules.sh script).
     });
 
     console.log('Current temperature is' + ds18b20.temperatureSync('10-00080283a977', {parser: 'hex'}));
+    
+### Precision
+
+The default `decimal` parser rounds to the nearest tenth of a degree Celcius. If the intent is to convert the value to Farenhight, the `preciseDecimal` parser can be used to return a non-rounded value that will contain three decimal places of precision.
 
 ## Develop
 
